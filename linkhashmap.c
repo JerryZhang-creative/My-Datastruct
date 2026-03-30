@@ -28,7 +28,7 @@ linkHashMap* linkHashMapCreate() {
     linkHashMap* map = (linkHashMap*)calloc(1, sizeof(linkHashMap));
     if (map == NULL) return NULL;
 
-    /*为哈希表申请空间,
+    /*为哈希表的桶申请空间,
     申请失败则释放map空间,
     返回NULL*/
     map->buckets = (Node**)calloc(DefaultSize, sizeof(Node*));
