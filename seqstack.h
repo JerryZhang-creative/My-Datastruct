@@ -1,6 +1,7 @@
 #ifndef SEQSTACK_H
 #define SEQSTACK_H
 
+#define DefaultSize 15
 typedef int ElementType;
 typedef struct seqStack {
     ElementType* data;  // 定义数据域记录数据

@@ -1,7 +1,6 @@
 #include "seqstack.h"
 
 #include <stdlib.h>
-#define Volume 15
 
 // 创建并初始化顺序栈
 seqStack* seqStackCreate() {
@@ -13,14 +12,14 @@ seqStack* seqStackCreate() {
     /*为顺序栈数据域申请空间,
     如果申请失败, 释放栈的空间
     返回NULL*/
-    ElementType* data = (ElementType*)malloc(sizeof(ElementType) * Volume);
+    ElementType* data = (ElementType*)malloc(sizeof(ElementType) * DefaultSize);
     if (data == NULL) {
         free(stack);
         return NULL;
     }
 
     /*初始化顺序栈*/
-    stack->capacity = Volume;
+    stack->capacity = DefaultSize;
     stack->data = data;
     stack->tail = -1;
 
